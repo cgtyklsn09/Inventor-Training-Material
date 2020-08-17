@@ -1,0 +1,9 @@
+Icon startCutOutSketchIconx = new Icon(this.GetType(), "Icons.StartCutOutSketch.ico");
+                            stdole.IPictureDisp standardIconIPictureDisp;
+                            standardIconIPictureDisp = (stdole.IPictureDisp)Microsoft.VisualBasic.Compatibility.VB6.Support.IconToIPicture(startCutOutSketchIconx);
+                            ClientNodeResource clientNodeResource;
+                            clientNodeResource = m_inventorApplication.ActiveDocument.BrowserPanes.ClientNodeResources.Add("AAAA", 1, standardIconIPictureDisp);
+                            ClientBrowserNodeDefinition clientBrowserNodeDefinition;
+                            clientBrowserNodeDefinition = m_inventorApplication.ActiveDocument.BrowserPanes.CreateBrowserNodeDefinition("BBB", 2, clientNodeResource);
+                            BrowserPane browserPane1 = m_inventorApplication.ActiveDocument.BrowserPanes.AddTreeBrowserPane("CCC", "xxx", (BrowserNodeDefinition)clientBrowserNodeDefinition);
+                            browserPane1.TopNode.AddChild(browserNode.BrowserNodeDefinition);
